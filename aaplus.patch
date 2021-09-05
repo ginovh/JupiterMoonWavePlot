@@ -1,0 +1,22 @@
+--- ref/CMakeLists.txt	2020-11-21 17:17:16.000000000 +0100
++++ aaplus/CMakeLists.txt	2021-08-30 17:27:35.743953599 +0200
+@@ -258,6 +258,7 @@
+   AATest.cpp
+ )
+ 
++
+ #-----------------------------------------------------------------------------
+ # Executables.
+ #-----------------------------------------------------------------------------
+@@ -267,9 +268,11 @@
+ # Libraries.
+ ADD_LIBRARY(aaplus-static STATIC ${SRCS_LIB} ${INCS})
+ SET_TARGET_PROPERTIES(aaplus-static PROPERTIES OUTPUT_NAME "aaplus")
++target_include_directories (aaplus-static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ ADD_LIBRARY(aaplus-shared SHARED ${SRCS_LIB} ${INCS})
+ SET_TARGET_PROPERTIES(aaplus-shared PROPERTIES OUTPUT_NAME "aaplus")
++target_include_directories (aaplus-shared PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ install(TARGETS aaplus-shared aaplus-static 
+ 		DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" )
