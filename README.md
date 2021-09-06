@@ -10,9 +10,6 @@ Plots the position of the Galilean moons. This is a very early version with many
 - Qt 4.8.0 and above 
 - AA+ v2.33 and above (http://www.naughter.com/aa.html)
 
-AA+ implements the algorithms from the book "Astronomical algortihms" by Jean Meeus. (http://www.willbell.com/math/mc1.htm)
-You may find comments in the code refering to this book.
-
 **Build:**
 
 Below are instructions to build from the command line. It assumes Qt is properly installed.
@@ -26,6 +23,13 @@ make -j4
 ```
 
 As an alternative to building from the command line, open the CMakeLists.txt file in QtCreator and build the project in the IDE.
+
+**Usage:**
+
+```
+Build/aaplus/bin/JupiterMoonWavePlot year month
+Build/aaplus/bin/JupiterMoonWavePlot 2021 9
+```
 
 **Supported platforms:**
 - Every platform that Qt supports

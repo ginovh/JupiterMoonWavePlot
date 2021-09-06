@@ -24,6 +24,11 @@ void MainWindow::paintEvent(QPaintEvent *event)
 
     unsigned int year = 2021;
     unsigned int month = 9;
+    QStringList args = QApplication::arguments();
+    if (args.size() == 3) {
+        year = args[1].toInt();
+        month = args[2].toInt();
+    }
     CAADate begin_date(year, month, 1, 0, 0, 0, true);
 //    CAADate end_date(year, month, 31, 23, 59, 59, true);
 
