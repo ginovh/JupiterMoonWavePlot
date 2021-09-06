@@ -22,7 +22,7 @@ For now easiest is to open the CMakeLists.txt file in QtCreator and build the pr
 ./getaaplus.bash
 mkdir build
 cd build/
-cmake ../ -DQT_QMAKE_EXECUTABLE=/home/ginovh/qt/Qt5.15.1/5.15.1/gcc_64/bin/qmake -DCMAKE_INSTALL_PREFIX=/home/ginovh/Programming/astro/JupiterEvents_cmake/local_install
+cmake ../ -DQT_QMAKE_EXECUTABLE=<path to Qt> -DCMAKE_INSTALL_PREFIX=<path to install dir>
 make -j4
 ```
 
