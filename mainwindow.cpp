@@ -22,8 +22,8 @@ void MainWindow::paintEvent(QPaintEvent *event)
 //    painter.drawLine( width(), height() / 2 , 0, height() / 2 );
     painter.drawLine( width() / 2, 0 , width() / 2, height() );
 
-    unsigned int year = 2022;
-    unsigned int month = 8;
+    unsigned int year = 2021;
+    unsigned int month = 9;
     CAADate begin_date(year, month, 1, 0, 0, 0, true);
 //    CAADate end_date(year, month, 31, 23, 59, 59, true);
 
@@ -37,6 +37,7 @@ void MainWindow::paintEvent(QPaintEvent *event)
     // draw horizontal lines every day at 0h UT
     for ( int y = 0; y < 32; y++  ) {  // res = 1d
         painter.drawLine( 0, y * scaleY, width(), y * scaleY);
+        painter.drawText(width() - 20, y * scaleY, QString::number(y));
     }
 
     GalileanDetails = CAAGalileanMoons::Calculate(begin_date, true);
