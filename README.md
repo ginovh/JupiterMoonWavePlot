@@ -2,7 +2,7 @@
 
 ### Graphical show Jupiter moons position
 
-Plots the position of the Galilean moons. This is a very early version with many todo's ( e.g. export to pdf etc.)
+Plots the position of the Galilean moons. This is a very early version with many todo's ( e.g. export to pdf, fix Qt install from command line etc.)
 
 ![Screenshot](Screenshot.png)
 
